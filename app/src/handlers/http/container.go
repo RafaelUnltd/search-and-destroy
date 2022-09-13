@@ -1,8 +1,8 @@
 package http
 
 import (
-	"poly-shooters/app/src/handlers/http/interfaces"
 	"poly-shooters/app/src/handlers/http/players"
+	"poly-shooters/app/src/interfaces"
 	"poly-shooters/app/src/services"
 
 	"github.com/labstack/echo/v4"
@@ -21,4 +21,5 @@ func NewHandlersContainer(s services.ServicesContainer) HandlersContainer {
 func (h HandlersContainer) RegisterRoutes(httpServer *echo.Echo) {
 	players := httpServer.Group("/players")
 	players.GET("", h.PlayersHandler.ListPlayers)
+	players.POST("", h.PlayersHandler.CreatePlayer)
 }

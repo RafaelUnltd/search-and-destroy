@@ -8,7 +8,7 @@ import (
 
 // Match is a match entity representation
 type Match struct {
-	ID         string         `json:"id" gorm:"primary_key"`
+	ID         string         `json:"id" gorm:"primary_key;type:uuid;default:uuid_generate_v4()"`
 	Status     string         `json:"status"`
 	WinnerTeam string         `json:"winner_team"`
 	CreatedAt  time.Time      `json:"created_at" validate:"omitempty"`

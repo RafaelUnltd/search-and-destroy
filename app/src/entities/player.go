@@ -8,7 +8,7 @@ import (
 
 // Player is a player entity representation
 type Player struct {
-	ID        string         `json:"id" gorm:"primary_key"`
+	ID        string         `json:"id" gorm:"primary_key;type:uuid;default:uuid_generate_v4()"`
 	Username  string         `json:"username"`
 	Email     string         `json:"email"`
 	Password  string         `json:"password"`

@@ -8,7 +8,7 @@ import (
 
 // PlayerMatch is a player_match entity representation
 type PlayerMatch struct {
-	ID        string         `json:"id" gorm:"primary_key"`
+	ID        string         `json:"id" gorm:"primary_key;type:uuid;default:uuid_generate_v4()"`
 	PlayerID  string         `json:"player_id"`
 	MatchID   string         `json:"match_id"`
 	Team      string         `json:"team"`
