@@ -19,4 +19,5 @@ type PlayersServiceInterface interface {
 type PlayersRepositoryInterface interface {
 	ListPlayers() []entities.Player
 	CreatePlayer(username, email, password string) (entities.Player, error)
+	GetOne(playerSearch entities.Player) entities.Player
 }
