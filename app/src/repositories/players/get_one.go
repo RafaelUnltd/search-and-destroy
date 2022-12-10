@@ -1,6 +1,6 @@
 package players
 
-import "poly-shooters/app/src/entities"
+import "search-and-destroy/app/src/entities"
 
 func (r Repository) GetOnePlayer(playerSearch entities.Player) entities.Player {
 	var player entities.Player

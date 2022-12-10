@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"poly-shooters/app/cmd/start"
-	"poly-shooters/app/src/repositories"
-	"poly-shooters/app/src/services"
+	"search-and-destroy/app/cmd/start"
+	"search-and-destroy/app/src/repositories"
+	"search-and-destroy/app/src/services"
 )
 
 func main() {

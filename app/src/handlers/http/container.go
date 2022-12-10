@@ -1,12 +1,12 @@
 package http
 
 import (
-	"poly-shooters/app/src/handlers/http/players"
-	"poly-shooters/app/src/interfaces"
-	"poly-shooters/app/src/services"
+	"search-and-destroy/app/src/handlers/http/players"
+	"search-and-destroy/app/src/interfaces"
+	"search-and-destroy/app/src/services"
 
-	"github.com/labstack/echo/middleware"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 type HandlersContainer struct {
@@ -20,10 +20,11 @@ func NewHandlersContainer(s services.ServicesContainer) HandlersContainer {
 }
 
 func (h HandlersContainer) RegisterRoutes(httpServer *echo.Echo) {
-	httpServer.POST("/login", h.PlayersHandler.AuthenticatePlayer)
+	public := httpServer.Group("/public")
+	public.POST("/login", h.PlayersHandler.AuthenticatePlayer)
+	public.POST("/register", h.PlayersHandler.CreatePlayer)
 
-	players := httpServer.Group("/players")
-	players.Use(middleware.JWT([]byte("TODO")))
-	players.GET("", h.PlayersHandler.ListPlayers)
-	players.POST("", h.PlayersHandler.CreatePlayer)
+	private := httpServer.Group("/private")
+	private.Use(middleware.JWT([]byte("TODO")))
+	private.GET("/players", h.PlayersHandler.ListPlayers)
 }

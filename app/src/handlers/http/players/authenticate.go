@@ -2,8 +2,8 @@ package players
 
 import (
 	"net/http"
-	"poly-shooters/app/src/entities"
-	"poly-shooters/app/src/structs"
+	"search-and-destroy/app/src/entities"
+	"search-and-destroy/app/src/structs"
 
 	"github.com/labstack/echo/v4"
 )

@@ -2,7 +2,7 @@ package players
 
 import (
 	"log"
-	"poly-shooters/app/src/entities"
+	"search-and-destroy/app/src/entities"
 
 	"golang.org/x/crypto/bcrypt"
 )

@@ -1,7 +1,7 @@
 version: "3"
 services:
-  poly-shooters:
-    container_name: poly-shooters
+  search-and-destroy:
+    container_name: search-and-destroy
     build:
       context: ./
       dockerfile: ./app/cmd/Dockerfile
@@ -18,7 +18,7 @@ services:
 
   database:
     image: postgres:alpine
-    container_name: database-poly-shooters
+    container_name: database-search-and-destroy
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: "root"
@@ -31,7 +31,7 @@ services:
 
   redis:
     image: redis:3.2.10-alpine
-    container_name: redis-poly-shooters
+    container_name: redis-search-and-destroy
     ports:
       - "6381:6379"
 

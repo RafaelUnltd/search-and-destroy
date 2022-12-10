@@ -1,8 +1,8 @@
 package players
 
 import (
-	"poly-shooters/app/src/interfaces"
-	"poly-shooters/app/src/services"
+	"search-and-destroy/app/src/interfaces"
+	"search-and-destroy/app/src/services"
 )
 
 type Handler struct {

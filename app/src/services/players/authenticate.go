@@ -1,8 +1,8 @@
 package players
 
 import (
-	"poly-shooters/app/src/entities"
-	"poly-shooters/app/src/structs"
+	"search-and-destroy/app/src/entities"
+	"search-and-destroy/app/src/structs"
 	"time"
 
 	"github.com/golang-jwt/jwt"

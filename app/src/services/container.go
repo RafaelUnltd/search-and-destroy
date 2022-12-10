@@ -1,9 +1,9 @@
 package services
 
 import (
-	"poly-shooters/app/src/interfaces"
-	"poly-shooters/app/src/repositories"
-	"poly-shooters/app/src/services/players"
+	"search-and-destroy/app/src/interfaces"
+	"search-and-destroy/app/src/repositories"
+	"search-and-destroy/app/src/services/players"
 )
 
 type ServicesContainer struct {

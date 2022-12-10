@@ -8,7 +8,7 @@ import (
 )
 
 func StartDatabase() (*gorm.DB, error) {
-	dsn := "host=database-poly-shooters user=root password=root dbname=shooters port=5432 sslmode=disable"
+	dsn := "host=database-search-and-destroy user=root password=root dbname=shooters port=5432 sslmode=disable"
 	database, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	if err != nil {

@@ -1,7 +1,7 @@
 package players
 
 import (
-	"poly-shooters/app/src/entities"
+	"search-and-destroy/app/src/entities"
 	"time"
 )
 

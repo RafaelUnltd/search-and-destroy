@@ -1,8 +1,8 @@
 package start
 
 import (
-	handlers "poly-shooters/app/src/handlers/http"
-	"poly-shooters/app/src/services"
+	handlers "search-and-destroy/app/src/handlers/http"
+	"search-and-destroy/app/src/services"
 
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"

@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"poly-shooters/app/src/interfaces"
-	"poly-shooters/app/src/repositories/players"
+	"search-and-destroy/app/src/interfaces"
+	"search-and-destroy/app/src/repositories/players"
 
 	"gorm.io/gorm"
 )
