@@ -22,4 +22,5 @@ func (h HandlersContainer) RegisterRoutes(httpServer *echo.Echo) {
 	players := httpServer.Group("/players")
 	players.GET("", h.PlayersHandler.ListPlayers)
 	players.POST("", h.PlayersHandler.CreatePlayer)
+	players.POST("/login", h.PlayersHandler.AuthenticatePlayer)
 }
